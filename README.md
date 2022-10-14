@@ -17,7 +17,7 @@ new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login
 
 ### Connecting and transfering 
 
-Here replace "fperakis" with your user name-
+Here replace "fperakis" with your user name.
 ```bash
 ssh -X fperakis@xhpcfep.hpc.spring8.or.jp
 ```
