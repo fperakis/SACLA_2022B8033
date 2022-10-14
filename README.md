@@ -35,14 +35,14 @@ ml python/SACLA_python-3.7/offline
 which python
 ```
 
-create virtual environment 
+create a virtual environment 
 ```bash
 python -m venv venv
 source venv/bin/activate
 which python
 ```
 
-add to the ~/.bashrc the following 
+add to your ~/.bashrc the following 
 ```bash
 source env/bin/activate
 export PIP_PROXY=http://proxy.hpc.spring8.or.jp:3128
