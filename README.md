@@ -23,3 +23,20 @@ ssh -X fperakis@xhpcfep.hpc.spring8.or.jp
 ```bash
 scp local_file fperakis@xhpcfep.hpc.spring8.or.jp:/home/fperakis
 ```
+
+-----------------------------
+# setting up procedure
+
+# activate SACLA tools
+ml python/SACLA_python-3.7/offline
+which python
+
+# create virtual environment 
+python -m venv venv
+source venv/bin/activate
+which python
+
+# add to the .bash_profile the following 
+source env/bin/activate
+export PIP_PROXY=http://proxy.hpc.spring8.or.jp:3128
+export HTTPS_PROXY=http://proxy.hpc.spring8.or.jp:3128
