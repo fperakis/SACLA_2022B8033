@@ -3,7 +3,7 @@ Analysis tools for the experiment 2022B8033 at SACLA XFEL (BL3, EH2)
 
 -----------------------------
 
-## Useful links 
+### Useful links 
 
 manual http://xfel.riken.jp/users/pdf/hpc_startup_manual_ver1.8.pdf
 
@@ -15,7 +15,7 @@ new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login
 
 -----------------------------
 
-## Connecting and transfering 
+### Connecting and transfering 
 ```bash
 ssh -X fperakis@xhpcfep.hpc.spring8.or.jp
 ```
@@ -25,7 +25,7 @@ scp local_file fperakis@xhpcfep.hpc.spring8.or.jp:/home/fperakis
 ```
 
 -----------------------------
-## setting up procedure
+### setting up procedure
 
 activate SACLA tools
 ```bash
@@ -40,7 +40,7 @@ source venv/bin/activate
 which python
 ```
 
-add to the .bash_profile the following 
+add to the ~/.bashrc the following 
 ```bash
 source env/bin/activate
 export PIP_PROXY=http://proxy.hpc.spring8.or.jp:3128
