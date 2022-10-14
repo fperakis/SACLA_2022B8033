@@ -46,3 +46,22 @@ source env/bin/activate
 export PIP_PROXY=http://proxy.hpc.spring8.or.jp:3128
 export HTTPS_PROXY=http://proxy.hpc.spring8.or.jp:3128
 ```
+
+-----------------------------
+### Running Jupiter lab
+
+run on terminal on remote computer 
+```bash
+jupyter lab --no-browser --port 8887 &
+```
+```bash
+run on terminal on local computer 
+
+```bash
+ssh -N -L localhost:8887:localhost:8887 fperakis@xhpcfep.hpc.spring8.or.jp
+```
+
+open in browser
+http://localhost:8887
+
+copy paste “token” and you are good to go.
