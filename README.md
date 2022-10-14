@@ -25,7 +25,7 @@ scp local_file fperakis@xhpcfep.hpc.spring8.or.jp:/home/fperakis
 ```
 
 -----------------------------
-### setting up procedure
+### Setting up procedure 
 
 activate SACLA tools
 ```bash
