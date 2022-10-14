@@ -12,3 +12,14 @@ install VPN https://hpc.spring8.or.jp
 analysis software http://xhpcfep.hpc.spring8.or.jp/manuals/modules  
 
 new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login 
+
+-----------------------------
+
+## Connecting and transfering 
+```bash
+ssh -X fperakis@xhpcfep.hpc.spring8.or.jp
+```
+
+```bash
+scp local_file fperakis@xhpcfep.hpc.spring8.or.jp:/home/fperakis
+```
