@@ -104,7 +104,7 @@ Run data convert
 DataConvert4 -l tag_739127.list -dir . -o 739127.h5
 ```
 
-or you can use the image averarging too
+or you can use the image averarging tool
 ```bash
 ImgAvg -l tag_739127.lst -out  739127.h5
 ```
