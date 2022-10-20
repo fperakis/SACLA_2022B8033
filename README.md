@@ -99,7 +99,12 @@ You can also select start and end tag number
 MakeTagList -b 3 -r 739127 -det 'OPAL-234363' -starttag 850076252 -endtag 850076268 -out tag_739127.lst 
 ```
 
-Run data conver
+Run data convert
 ```bash
 DataConvert4 -l tag_739127.list -dir . -o 739127.h5
+```
+
+or you can use the image averarging too
+```bash
+ImgAvg -l tag_739127.lst -out  739127.h5
 ```
