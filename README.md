@@ -88,7 +88,7 @@ git commit -m “[message]”
 git push
 git pull
 ```
-# note that to be able to push you will need to create a PAT (instead of password)
+note that to be able to push you will need to create a PAT (instead of password), I used the classic token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 
 
 -----------------------------
