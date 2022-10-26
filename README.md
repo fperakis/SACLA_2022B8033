@@ -69,6 +69,29 @@ http://localhost:8887
 copy paste “token” and you are good to go.
 
 -----------------------------
+
+### setting up GitHub repo
+configure 
+```bash
+git config --global user.name fperakis
+git config --global color.ui auto
+git config --global user.email f.perakis@fysik.su.se
+git config --global http.proxy http://proxy.hpc.spring8.or.jp:3128
+```
+
+standard git commands
+```bash
+git clone https://github.com/fperakis/SACLA_2022B8033.git
+git status
+git add [file]
+git commit -m “[message]”
+git push
+git pull
+```
+# note that to be able to push you will need to create a PAT (instead of password)
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 
+
+-----------------------------
 ### Converting data to h5
 
 Here is an example of how to convert SACLA data to h5. 
@@ -101,7 +124,7 @@ MakeTagList -b 3 -r 739127 -det 'OPAL-234363' -starttag 850076252 -endtag 850076
 
 Run data convert
 ```bash
-DataConvert4 -l tag_739127.list -dir . -o 739127.h5
+DataConvert4 -l tag_739127.lst -dir . -o 739127.h5
 ```
 
 or you can use the image averarging tool
