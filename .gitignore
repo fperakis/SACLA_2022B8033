@@ -1,2 +1,4 @@
 # Jupyter Notebook
 .ipynb_checkpoints
+# job submission output and error files
+scripts/proc-*
