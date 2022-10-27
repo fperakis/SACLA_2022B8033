@@ -5,7 +5,7 @@
 #!/bin/bash
 
 #PBS -l walltime=1:00:00
-#PBS -l select=ncpus=1:mem=4gb
+#PBS -l select=ncpus=1:mem=16gb
 #PBS -M maddalena.bin@fysik.su.se
 #PBS -q serial
 #PBS -N proc-dark
