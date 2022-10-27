@@ -30,3 +30,10 @@ def fit(function,x,y,p0=None,sigma=None,bounds=None):
     curve = function(x,*popt)
     perr = np.sqrt(np.diag(pcov))
     return popt,x,curve,perr
+
+def wavelength_(photon_energy):
+    ELEMENTARY_CHARGE = 1.602176634E-19 # C
+    SPEED_OF_LIGHT = 299792458 # m/s
+    PLANCK_CONSTANT = 6.62607015E-34 # Js
+    wavelength = PLANCK_CONSTANT*SPEED_OF_LIGHT/(photon_energy*ELEMENTARY_CHARGE)
+    return wavelength
