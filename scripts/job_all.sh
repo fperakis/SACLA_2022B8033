@@ -24,7 +24,7 @@ sh process_run.sh $run $dark
 
 echo Data reduction ended: `date "+%Y %m %d - %H:%M:%S"`
 
-chmod +X ./Iq_test.py
-python IqPhi.py $run
+chmod +X ./IqPhi_test.py
+python IqPhi_test.py $run
 
 echo Job and analysis ended: `date "+%Y %m %d - %H:%M:%S"`
