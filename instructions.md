@@ -71,7 +71,7 @@ copy paste “token” and you are good to go.
 -----------------------------
 
 ### setting up GitHub repo
-configure 
+#### configure 
 ```bash
 git config --global user.name fperakis
 git config --global color.ui auto
@@ -79,7 +79,7 @@ git config --global user.email f.perakis@fysik.su.se
 git config --global http.proxy http://proxy.hpc.spring8.or.jp:3128
 ```
 
-standard git commands
+#### standard git commands
 ```bash
 git clone https://github.com/fperakis/SACLA_2022B8033.git
 git status
@@ -91,4 +91,26 @@ git pull
 note that to be able to push you will need to create a PAT (instead of password), I used the classic token
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 
 
------------------------------
+
+#### working with branches. 
+Here we use for example the branch includeTagNumbers
+
+list existing branches
+```bash
+git branch
+```
+Create a new branch
+```bash
+git checkout -b origin/includeTagNumbers
+```
+Move to a branch
+```bash
+git checkout origin/includeTagNumbers
+```
+
+Pull from a branch
+```bash
+git pull origin includeTagNumbers
+```
+
+
