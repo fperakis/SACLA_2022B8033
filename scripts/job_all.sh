@@ -25,6 +25,6 @@ sh process_run.sh $run $dark $tagStart $tagEnd
 echo Data reduction ended: `date "+%Y %m %d - %H:%M:%S"`
 
 chmod +X ./IqPhi.py
-python IqPhi.py $run
+python IqPhi.py $run $tagStart $tagEnd
 
 echo Job and analysis ended: `date "+%Y %m %d - %H:%M:%S"`
