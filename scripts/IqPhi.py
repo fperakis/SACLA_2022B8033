@@ -2,6 +2,7 @@ import numpy as np
 import h5py 
 import pyFAI, pyFAI.detectors, pyFAI.azimuthalIntegrator
 import sys
+import time
 
 def Iq_calculator(run):
     """
@@ -34,8 +35,10 @@ def Iq_calculator(run):
             I[i,:,:], q, phi = ai.integrate2d_ng(f[f'/run_{run}/detector_2d_assembled_1/tag_{tag}/detector_data'][:], 
                                         nbins, n_phi, mask=mask, correctSolidAngle=True, unit='q_nm^-1', radial_range=radial_range)
             i += 1
-
-    hf = h5py.File(f'{path}/03-h5analysis/{run}_IqPhi_test.h5', 'w')
+        startTag=f[f'/run_{run}/event_info/tag_number_list'][0]
+        endTag=f[f'/run_{run}/event_info/tag_number_list'][maxtag]
+    timestamp = time.strftime("%d%H%M%S", time.gmtime(time.time()))
+    hf = h5py.File(f'{path}/03-h5analysis/IqPhi_{run}_{startTag}_{endTag}_{timestamp}.h5', 'w')
     hf.create_dataset('q', data=q)
     hf.create_dataset('I', data=I)
     hf.create_dataset('phi', data=phi)
