@@ -10,5 +10,5 @@ ImgAvg -l /UserData/maddalena/sacla2018/01-tag-lists/"$1".lst -out /UserData/mad
 
 echo ##########################
 echo END OF THE SCRIPT
-echo run "$1" saved as h5 file in /UserData/maddalenasacla2018/02-h5compression/"$1".h5
+echo run "$1" saved as h5 file in /UserData/maddalena/sacla2018/02-h5compression/"$1".h5
 echo ##########################
