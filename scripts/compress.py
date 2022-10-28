@@ -1,5 +1,7 @@
 import os
 import sys
+# to run this:
+#$ python compress.py run dark
 n_splits=10 # this is the number of file the original file is split into
 def get_tags(run):
     name=os.popen(f'module load SACLA_tool; ShowRunInfo -b 3 -r {run}')
