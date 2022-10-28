@@ -1,18 +1,6 @@
-# Instructions 
------------------------------
+# Configuration 
 
-## Instructions for setting your system at SACLA servers
-
-
-### Useful links 
-
-manual http://xfel.riken.jp/users/pdf/hpc_startup_manual_ver1.8.pdf
-
-install VPN https://hpc.spring8.or.jp 
-
-analysis software http://xhpcfep.hpc.spring8.or.jp/manuals/modules  
-
-new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login 
+> Instructions for setting your system at SACLA servers 
 
 -----------------------------
 
