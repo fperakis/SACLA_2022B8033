@@ -1,6 +1,6 @@
 # Script to submit a job to calculate the Iq of all the shots of a run
 # Argument: "run" run number, "dark" dark run number
-# run the job with: $ qsub -v run=690006,dark=690007 job_all.sh
+# run the job with: $ qsub -v run=690006,dark=690007,tagStart=2312123,tagEnd=13243123, job_all.sh
 
 #!/bin/bash
 
