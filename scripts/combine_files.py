@@ -19,7 +19,7 @@ def combine_files(run):
     Phi=f['phi'][:]
     I=[]
     
-    for file in files:
+    for file in files[1:]:
         f=h5py.File(path+file,'r')
         I+=f['I']    
 
