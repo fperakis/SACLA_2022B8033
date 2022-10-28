@@ -4,8 +4,8 @@
 
 #!/bin/bash
 
-#PBS -l walltime=1:00:00
-#PBS -l select=ncpus=1:mem=4gb
+#PBS -l walltime=10:00:00
+#PBS -l select=ncpus=1:mem=32gb
 #PBS -M maddalena.bin@fysik.su.se
 #PBS -q serial
 #PBS -N proc-run
@@ -24,7 +24,7 @@ sh process_run.sh $run $dark
 
 echo Data reduction ended: `date "+%Y %m %d - %H:%M:%S"`
 
-chmod +X ./Iq_test.py
-python IqPhi.py $run
+chmod +X ./IqPhi_test.py
+python IqPhi_test.py $run
 
 echo Job and analysis ended: `date "+%Y %m %d - %H:%M:%S"`
