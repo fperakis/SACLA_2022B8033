@@ -28,7 +28,7 @@ This script does the following:
           └──IqPhi.py                         # Calculates the Iq of the given run/tags and generates an h5 file with the Iqs for each shot
           
 ### Step 3: analyse data
-> Load h5 file with I(q) data in a jupyter notebook and analyse the data including filtering for:
+> Use jupyter notebooks to load h5 file with I(q) data and analyse the data including filtering for:
 > - find hit/misses 
 > - excludes shots with streaks 
 > - distinguish between shots with liquids or ice 
