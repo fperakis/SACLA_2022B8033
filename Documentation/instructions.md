@@ -113,4 +113,9 @@ Pull from a branch
 git pull origin includeTagNumbers
 ```
 
+Push to a branch
+```bash
+git push origin head/orgin/includeTagNumbers
+```
+
 
