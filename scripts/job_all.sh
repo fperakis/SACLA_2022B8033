@@ -9,7 +9,7 @@
 #PBS -M maddalena.bin@fysik.su.se
 #PBS -q serial
 #PBS -N proc-run
-#PBS -v run,dark
+#PBS -v run,dark,tagStart,tagEnd
 
 module load SACLA_tool
 source /home/maddalena/drop/bin/activate
@@ -20,11 +20,11 @@ echo run $run, with dark $dark
 echo Job started: `date "+%Y %m %d - %H:%M:%S"`
 
 chmod +X ./process_run.sh
-sh process_run.sh $run $dark
+sh process_run.sh $run $dark $tagStart $tagEnd
 
 echo Data reduction ended: `date "+%Y %m %d - %H:%M:%S"`
 
-chmod +X ./IqPhi_test.py
-python IqPhi_test.py $run
+chmod +X ./IqPhi.py
+python IqPhi.py $run
 
 echo Job and analysis ended: `date "+%Y %m %d - %H:%M:%S"`
