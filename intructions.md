@@ -1,5 +1,8 @@
-# Instructions for preparing your system at SACLA servers
+# Instructions 
 -----------------------------
+
+## Instructions for setting your system at SACLA servers
+
 
 ### Useful links 
 
