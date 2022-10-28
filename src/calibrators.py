@@ -36,5 +36,9 @@ def iceIh_peaks():
 
 
 def silver_behenate():
-    q = [0.107625095, 0.215250189, 0.322875284, 0.430500378]
+    '''
+    returns the Silver Behenate peak positions in Å−1
+    taken from http://gisaxs.com/index.php/Material:Silver_behenate
+    '''
+    q = [0.107625095, 0.215250189, 0.322875284, 0.430500378,0.5380,0.6456, 0.7532, 0.8608, 0.9684, 1.076, 1.184, 1.369, 1.387]
     return q
