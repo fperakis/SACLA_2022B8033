@@ -92,7 +92,7 @@ note that to be able to push you will need to create a PAT (instead of password)
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 
 
 -----------------------------
-### Converting data to h5
+### Converting data to h5 interactively
 
 Here is an example of how to convert SACLA data to h5. 
 
