@@ -10,10 +10,8 @@ import sys
 path_combined='/UserData/maddalena/sacla2018/06-Iq_combined/'
 path='/UserData/maddalena/sacla2018/03-h5analysis/'
 
-
-
 def combine_files(run):
-    os.chdir("/UserData/maddalena/sacla2018/03-h5analysis/")
+    os.chdir(path)
     files = glob.glob(f"IqPhi_{run}*.h5")
 
     f=h5py.File(files[0],'r')
