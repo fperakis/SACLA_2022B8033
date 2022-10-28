@@ -4,6 +4,13 @@ import glob
 import os
 import sys
 import time
+import argparse
+
+# - parsers
+parser = argparse.ArgumentParser(description='Combine h5 files from the analysis into one')
+parser.add_argument('-r', '--run', type=str, required=True, help='run number to combine')
+
+args = parser.parse_args()
 
 # parameters for loading
 path_combined = '/UserData/maddalena/sacla2022/06-Iq_combined/'
@@ -28,4 +35,5 @@ def combine_files(run):
     hf.create_dataset('I', data=I)
     hf.create_dataset('phi', data=I)
     hf.close()
-combine_files(sys.argv[1])
+    
+combine_files(args.run)

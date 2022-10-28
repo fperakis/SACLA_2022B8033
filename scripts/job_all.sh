@@ -6,7 +6,6 @@
 
 #PBS -l walltime=10:00:00
 #PBS -l select=ncpus=1:mem=32gb
-#PBS -M maddalena.bin@fysik.su.se
 #PBS -q serial
 #PBS -N proc-run
 #PBS -v run,dark,tagStart,tagEnd
@@ -26,6 +25,6 @@ sh process_run.sh $run $dark $tagStart $tagEnd
 echo Data reduction ended: `date "+%Y %m %d - %H:%M:%S"`
 
 chmod +X ./IqPhi.py
-python IqPhi.py $run $tagStart $tagEnd
+python IqPhi.py -r $run -s $tagStart -e $tagEnd
 
 echo Job and analysis ended: `date "+%Y %m %d - %H:%M:%S"`
