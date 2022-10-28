@@ -4,7 +4,7 @@ import pyFAI, pyFAI.detectors, pyFAI.azimuthalIntegrator
 import sys
 import time
 
-def Iq_calculator(run):
+def Iq_calculator(run,startTag,endTag):
     """
     Calcuale the Iq and Iphi of an entire run and generates an h5 file with the Iqs for each shot
     args:
@@ -26,7 +26,7 @@ def Iq_calculator(run):
     radial_range = [0,27]
     mask = np.load(f'{path}/04-utilities/mask.npy')
     
-    with h5py.File(f'{path}/02-h5compression/{run}.h5', 'r') as f:
+    with h5py.File(f'{path}/02-h5compression/{run}_{startTag}_{endTag}.h5', 'r') as f:
         maxtag = len(f[f'/run_{run}/event_info/tag_number_list'][:])
         I = np.zeros([maxtag, n_phi, nbins])
         i = 0
@@ -48,4 +48,4 @@ def Iq_calculator(run):
     # hf.create_dataset('shutter', data=f[f'/run_{run}/event_info/bl_3/eh_1/xfel_pulse_selector_status'])
     hf.close()
     
-Iq_calculator(sys.argv[1])
+Iq_calculator(sys.argv[1],sys.argv[2],sys.argv[3],)
