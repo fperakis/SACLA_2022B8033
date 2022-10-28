@@ -36,7 +36,7 @@ def Iq_calculator(run,startTag,endTag):
                                         nbins, n_phi, mask=mask, correctSolidAngle=True, unit='q_nm^-1', radial_range=radial_range)
             i += 1
         startTag=f[f'/run_{run}/event_info/tag_number_list'][0]
-        endTag=f[f'/run_{run}/event_info/tag_number_list'][maxtag]
+        endTag=f[f'/run_{run}/event_info/tag_number_list'][maxtag-1]
     timestamp = time.strftime("%d%H%M%S", time.gmtime(time.time()))
     hf = h5py.File(f'{path}/03-h5analysis/IqPhi_{run}_{startTag}_{endTag}_{timestamp}.h5', 'w')
     hf.create_dataset('q', data=q)
@@ -47,5 +47,7 @@ def Iq_calculator(run,startTag,endTag):
     # f.create_dataset('tags', data=f[f'/run_{run}/event_info/tag_number_list'])
     # hf.create_dataset('shutter', data=f[f'/run_{run}/event_info/bl_3/eh_1/xfel_pulse_selector_status'])
     hf.close()
-    
-Iq_calculator(sys.argv[1],sys.argv[2],sys.argv[3],)
+print(sys.argv[1])
+print(sys.argv[2])
+print(sys.argv[3])
+Iq_calculator(sys.argv[1],sys.argv[2],sys.argv[3])
