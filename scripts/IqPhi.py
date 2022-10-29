@@ -33,7 +33,7 @@ def Iq_calculator(run,startTag,endTag):
     # integration params
     nbins = 300
     n_phi = 30
-    radial_range = [0,27]
+    #radial_range = [0,27]
     mask = np.load(f'{path}/04-utilities/mask.npy')
     
     print("Opening the compressed h5 file")
@@ -45,7 +45,7 @@ def Iq_calculator(run,startTag,endTag):
         print("Start calculating the Iq and Iphi")
         for tag in f[f'/run_{run}/event_info/tag_number_list'][:maxtag]:
             I[i,:,:], q, phi = ai.integrate2d_ng(f[f'/run_{run}/detector_2d_assembled_1/tag_{tag}/detector_data'][:], 
-                                        nbins, n_phi, mask=mask, correctSolidAngle=True, unit='q_nm^-1', radial_range=radial_range)
+                                        nbins, n_phi, mask=mask, correctSolidAngle=True, unit='q_nm^-1')
             i += 1
         startTag=f[f'/run_{run}/event_info/tag_number_list'][0]
         endTag=f[f'/run_{run}/event_info/tag_number_list'][maxtag-1]
