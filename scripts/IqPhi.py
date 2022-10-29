@@ -22,13 +22,14 @@ def Iq_calculator(run,startTag,endTag):
 
     # detector params
     path = '/UserData/maddalena/sacla2022'
-    sample_det_distance = 0.095
-    wavelength = 0.887e-10
-    Pixel1, Pixel2 = 50e-6, 50e-6
-    posx, posy = Pixel1*1200, Pixel2*1150
-    det = pyFAI.detectors.Detector(pixel1=Pixel1, pixel2=Pixel2, max_shape=[2399,2399])
-    ai = pyFAI.azimuthalIntegrator.AzimuthalIntegrator(dist=sample_det_distance, detector=det, wavelength=wavelength, poni1=posx, poni2=posy)
-    
+    ponifile='/04-utilities/geometry_1192416.poni'
+#    sample_det_distance = 0.095
+#    wavelength = 0.887e-10
+#    Pixel1, Pixel2 = 50e-6, 50e-6
+#    posx, posy = Pixel1*1200, Pixel2*1150
+#    det = pyFAI.detectors.Detector(pixel1=Pixel1, pixel2=Pixel2, max_shape=[2399,2399])
+#    ai = pyFAI.azimuthalIntegrator.AzimuthalIntegrator(dist=sample_det_distance, detector=det, wavelength=wavelength, poni1=posx, poni2=posy)
+    ai=pyFAI.load(f'{path}{ponifile}')
     # integration params
     nbins = 300
     n_phi = 30
@@ -54,10 +55,10 @@ def Iq_calculator(run,startTag,endTag):
     hf.create_dataset('q', data=q)
     hf.create_dataset('I', data=I)
     hf.create_dataset('phi', data=phi)
-    # hf.create_dataset('Energy', data=f[f'/run_{run}/event_info/bl_3/eh_1/xfel_pulse_selector_status'])
-    # hf.create_dataset('I_0', data=f[f'/run_{run}/event_info/bl_3/eh_2/bm_1_signal_in_coulomb'])
-    # hf.create_dataset('tags', data=f[f'/run_{run}/event_info/tag_number_list'])
-    # hf.create_dataset('shutter', data=f[f'/run_{run}/event_info/bl_3/eh_1/xfel_pulse_selector_status'])
+    hf.create_dataset('PulseEnergy', data=f[f'/run_{run}/event_info/bl_3/oh_2/bm_1_pulse_energy_in_joule'])
+    hf.create_dataset('PhotonEnergy', data=f[f'/run_{run}/event_info/bl_3/oh_2/photon_energy_in_eV'])
+    hf.create_dataset('tags', data=f[f'/run_{run}/event_info/tag_number_list'])
+    hf.create_dataset('shutter', data=f[f'/run_{run}/event_info/bl_3/eh_1/xfel_pulse_selector_status'])
     hf.close()
 
     print("Analysis saved in f'{path}/03-h5analysis/IqPhi_{run}_{startTag}_{endTag}.h5'")
