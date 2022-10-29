@@ -22,7 +22,7 @@ def Iq_calculator(run,startTag,endTag):
 
     # detector params
     path = '/UserData/maddalena/sacla2022'
-    ponifile='/04-utilities/geometry_1192416.poni'
+    ponifile='/04-utilities/geometry_final.poni'
 #    sample_det_distance = 0.095
 #    wavelength = 0.887e-10
 #    Pixel1, Pixel2 = 50e-6, 50e-6

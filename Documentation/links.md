@@ -7,6 +7,8 @@ install VPN https://hpc.spring8.or.jp
 ------------------
 ### Links that require active VPN
 
+sacla elog http://xhpcelog.hpc.spring8.or.jp/elog/runinfo/3
+
 analysis software http://xhpcfep.hpc.spring8.or.jp/manuals/modules  
 
 new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login
