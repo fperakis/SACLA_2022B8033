@@ -52,7 +52,7 @@ def Iq_calculator(run,startTag,endTag):
     print("End of Iq and Iphi calculation")
 
     hf = h5py.File(f'{path}/03-h5analysis/IqPhi_{run}_{startTag}_{endTag}.h5', 'w')
-    hf.create_dataset('q', data=q)
+    hf.create_dataset('q', data=q/10) ##! in angstrom
     hf.create_dataset('I', data=I)
     hf.create_dataset('phi', data=phi)
     hf.create_dataset('PulseEnergy', data=f[f'/run_{run}/event_info/bl_3/oh_2/bm_1_pulse_energy_in_joule'])
