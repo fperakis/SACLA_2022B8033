@@ -1,6 +1,8 @@
 import numpy as np
 
-# ----------------------------- modified atomic form factors (MAFF)
+# modified atomic form factors (MAFF) for H2O
+# see also Wang et al.  J. Chem. Phys. 101, 4842 (1994); https://doi.org/10.1063/1.467407
+
 def maffO(alphaO, delta, q):
     # Waasmaier/Kirfel five gaussian coefficients
     a1 = 2.960427
