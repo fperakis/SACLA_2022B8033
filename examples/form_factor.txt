@@ -6,7 +6,7 @@
 # Wang et al.  J. Chem. Phys. 101, 4842 (1994); https://doi.org/10.1063/1.467407				
 #
 #	        Compton Scattering of H2O			Molecular form factor
-Q (1/A)		H	        O	        total	    FF
+# Q (1/A)	H	        O	        total	    FF
 0.000000	0.000000	0.000000	0.000000	100
 0.025000	0.000391	0.000651	0.001434	99.98966
 0.050000	0.000814	0.002010	0.003638	99.955342
