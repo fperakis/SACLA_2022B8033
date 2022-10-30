@@ -1,22 +1,22 @@
 ### Useful links for configuration
 
-manual http://xfel.riken.jp/users/pdf/hpc_startup_manual_ver1.8.pdf
+* manual http://xfel.riken.jp/users/pdf/hpc_startup_manual_ver1.8.pdf
 
-install VPN https://hpc.spring8.or.jp 
+* install VPN https://hpc.spring8.or.jp 
 
 ------------------
 ### Links that require active VPN
 
-sacla elog http://xhpcelog.hpc.spring8.or.jp/elog/runinfo/3
+* SACLA elog http://xhpcelog.hpc.spring8.or.jp/elog/runinfo/3
 
-analysis software http://xhpcfep.hpc.spring8.or.jp/manuals/modules  
+* analysis software http://xhpcfep.hpc.spring8.or.jp/manuals/modules  
 
-new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login
+* new user hpc account http://xhpcelog.hpc.spring8.or.jp/account/login
 
-2D Data viewer http://xhpcelog.hpc.spring8.or.jp/analysis/DatabaseViewer
+* 2D Data viewer http://xhpcelog.hpc.spring8.or.jp/analysis/DatabaseViewer
 
 ------------------
 
 ### Other links for analysis
 
-pyFAI calibration https://pyfai.readthedocs.io/en/master/usage/tutorial/Recalib/Recalib_notebook.html
+* pyFAI calibration https://pyfai.readthedocs.io/en/master/usage/tutorial/Recalib/Recalib_notebook.html
