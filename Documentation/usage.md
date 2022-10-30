@@ -10,7 +10,7 @@
 > Creates `.h5` files based on given runs and calcualte the I(q) for each shot. It compresses the data from the original `.json` files which contains 2D images of all shots into the final `.h5` file which containes I(q) of each run. The input is run number and dark number. 
 > Example of use:
 ```bash
-python compress.py 690006 690007
+python compress.py -r 690006 -d 690007
 ```
 
 ### Step 3: analyse data
