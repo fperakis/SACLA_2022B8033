@@ -2,10 +2,10 @@
 
 * manual http://xfel.riken.jp/users/pdf/hpc_startup_manual_ver1.8.pdf
 
-* install VPN https://hpc.spring8.or.jp 
+* install `VPN` https://hpc.spring8.or.jp 
 
 ------------------
-### Links that require active VPN
+### Links that require active `VPN`
 
 * SACLA elog http://xhpcelog.hpc.spring8.or.jp/elog/runinfo/3
 
